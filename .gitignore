@@ -1,0 +1,49 @@
+#            _ _   _                            
+#       __ _(_) |_(_) __ _ _ __   ___  _ __ ___ 
+#      / _` | | __| |/ _` | '_ \ / _ \| '__/ _ \
+#     | (_| | | |_| | (_| | | | | (_) | | |  __/
+#    (_)__, |_|\__|_|\__, |_| |_|\___/|_|  \___|
+#      |___/         |___/                      
+
+
+# Blacklist all files/folders in .gitignore's directory
+/*
+
+# Whitelist .gitignore itself and the README
+!.gitignore
+!README.md
+
+#### MASTER WHITELIST ####
+
+!git/
+git/*
+!git/config
+
+!i3/
+i3/*
+!i3/config
+
+!nvim/
+nvim/*
+!nvim/init.vim
+
+!python/
+python/*
+!python/pythonrc.py
+
+!ssh/
+ssh/*
+!ssh/config
+
+!zsh/
+zsh/*
+!zsh/.zprofile
+!zsh/.zshenv
+!zsh/.zshrc
+
+!X11/
+X11/*
+!X11/xinitrc
+# !X11/Xmodmap
+!X11/Xresources
+
