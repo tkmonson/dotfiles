@@ -73,8 +73,8 @@
     # Start program launcher
     bindsym $mod+d exec dmenu_run
 
-    # Start Firefox
-    bindsym $mod+backslash exec brave
+    # Start browser
+    bindsym $mod+backslash exec qutebrowser
 
     # Pulse Audio Controls
     bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%

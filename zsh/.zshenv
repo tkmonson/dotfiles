@@ -32,9 +32,13 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonrc.py
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export XMONAD_CACHE_HOME="$XDG_CACHE_HOME"/xmonad
+export XMONAD_CONFIG_HOME="$XDG_CONFIG_HOME"/xmonad
+export XMONAD_DATA_HOME="$XDG_DATA_HOME"/xmonad
 
 # Other Variables
 export VISUAL=/usr/bin/nvim
 export EDITOR="$VISUAL"
 export PAGER=/usr/bin/less
+export BROWSER=/usr/bin/qutebrowser
 

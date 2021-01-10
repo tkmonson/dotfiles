@@ -5,7 +5,7 @@
 !    /_/\_\_|  \___||___/\___/ \__,_|_|  \___\___||___/                                              
 
 
-*.dpi: 225
+Xft.dpi: 192
 *.font: SourceCodePro:pixelsize=30:antialias=true
 ! *.alpha: 200
 *internalBorder: 10

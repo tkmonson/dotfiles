@@ -37,8 +37,15 @@ nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
 
 " Vimtex settings
-let g:vimtex_view_method ='zathura'
-let g:tex_flavor ='xetex'
+let g:vimtex_view_method = 'zathura'
+let g:tex_flavor = 'latex'
+let g:vimtex_compiler_latexmk = {
+    \ 'options' : [
+    \   '-shell-escape',
+    \ ],
+    \}
+    
+"let g:vimtex_compiler_engine = 'lualatex'
 
 " Split navigation with C-hjkl
 map <c-h> <c-w>h

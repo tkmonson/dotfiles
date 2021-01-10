@@ -6,14 +6,14 @@
 #      |___/         |___/                      
 
 
-# Blacklist all files/folders in .gitignore's directory
+# Block all files/folders in .gitignore's directory
 /*
 
-# Whitelist .gitignore itself and the README
+# Pass .gitignore itself and the README
 !.gitignore
 !README.md
 
-#### MASTER WHITELIST ####
+#### MASTER PASSLIST ####
 
 !git/
 git/*
@@ -31,19 +31,28 @@ nvim/*
 python/*
 !python/pythonrc.py
 
+!qutebrowser/
+qutebrowser/*
+!qutebrowser/config.py
+
 !ssh/
 ssh/*
 !ssh/config
 
-!zsh/
-zsh/*
-!zsh/.zprofile
-!zsh/.zshenv
-!zsh/.zshrc
+!startpage/
+startpage/*
+!startpage/index.html
+!startpage/style.css
 
 !X11/
 X11/*
 !X11/xinitrc
 # !X11/Xmodmap
 !X11/Xresources
+
+!zsh/
+zsh/*
+!zsh/.zprofile
+!zsh/.zshenv
+!zsh/.zshrc
 
