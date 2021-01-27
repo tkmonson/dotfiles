@@ -5,12 +5,16 @@
 #    (_)___|___/_| |_|_|  \___|
 
 
+# Run NVM script
+[ -s "$NVM_DIR/nvm.sh" ] && \
+    \. "$NVM_DIR/nvm.sh"
+
 # Force SSH and wget to conform to XDG Specification
 [[ -s "$XDG_CONFIG_HOME/ssh/config" ]] && \
     SSH_CONFIG="-F $XDG_CONFIG_HOME/ssh/config"
 
-[[ -s "$XDG_CONFIG_HOME/ssh/id_rsa" ]] && \
-    SSH_ID="-i $XDG_CONFIG_HOME/ssh/id_rsa"
+[[ -s "$XDG_CONFIG_HOME/ssh/ibm_rsa" ]] && \
+    SSH_ID="-i $XDG_CONFIG_HOME/ssh/ibm_rsa"
 
 alias ssh="ssh $SSH_CONFIG $SSH_ID"
 alias ssh-copy-id="ssh-copy-id $SSH_ID"
@@ -64,13 +68,15 @@ alias vim='nvim'
 alias z='zathura'
 
 # Important Config Files
-alias i3cf="nvim $XDG_CONFIG_HOME/i3/config"
-alias qbcf="nvim $XDG_CONFIG_HOME/qutebrowser/config.py"
+alias i3rc="nvim $XDG_CONFIG_HOME/i3/config"
+alias qrc="nvim $XDG_CONFIG_HOME/qutebrowser/config.py"
+alias skrc="nvim $XDG_CONFIG_HOME/skhd/skhdrc"
 alias vrc="nvim $XDG_CONFIG_HOME/nvim/init.vim"
-alias xmcf="nvim $XDG_CONFIG_HOME/xmonad/xmonad.hs"
+alias xmrc="nvim $XDG_CONFIG_HOME/xmonad/xmonad.hs"
 alias xrc="nvim $XDG_CONFIG_HOME/X11/xinitrc"
 alias Xmm="nvim $XDG_CONFIG_HOME/X11/Xmodmap"
 alias Xrc="nvim $XDG_CONFIG_HOME/X11/Xresources"
+alias yrc="nvim $XDG_CONFIG_HOME/yabai/yabairc"
 alias znv="nvim $XDG_CONFIG_HOME/zsh/.zshenv"
 alias zrc="nvim $XDG_CONFIG_HOME/zsh/.zshrc"
 
@@ -105,7 +111,7 @@ alias backup="cp -ruv $HOME/code  \
                       $HOME/notes \
                       $XDG_CONFIG_HOME /run/media/tkmonson/titan_usb/alshain"
 
-alias gitkey="eval '$(ssh-agent -s)'; ssh-add $HOME/.config/ssh/id_rsa"
+alias gitkey="eval '$(ssh-agent -s)'; ssh-add $HOME/.config/ssh/ibm_rsa"
 
 # -------- COLORS --------
 
@@ -124,5 +130,5 @@ bindkey -v '^?' backward-delete-char
 
 PROMPT=$'\n'"[%F{blue}%n%f@%F{yellow}%m%f]$  "
 cat $XDG_CACHE_HOME/neofetch
-ls
+cd ~; ls
 

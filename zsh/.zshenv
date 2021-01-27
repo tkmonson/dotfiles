@@ -29,6 +29,7 @@ export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export NVM_DIR="$XDG_CONFIG_HOME"/nvm
 export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonrc.py
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
@@ -37,8 +38,8 @@ export XMONAD_CONFIG_HOME="$XDG_CONFIG_HOME"/xmonad
 export XMONAD_DATA_HOME="$XDG_DATA_HOME"/xmonad
 
 # Other Variables
-export VISUAL=/usr/bin/nvim
+export VISUAL=/usr/local/bin/nvim
 export EDITOR="$VISUAL"
 export PAGER=/usr/bin/less
-export BROWSER=/usr/bin/qutebrowser
+export BROWSER=/Applications
 

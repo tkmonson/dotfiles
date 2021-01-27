@@ -13,14 +13,14 @@ config.bind(",m", "hint links spawn mpv {hint-url}")
 
 # bukuadd...
 
-c.downloads.location.directory = "/home/tmonson/temp"
+c.downloads.location.directory = "/Users/tkmonson/Downloads"
 
 c.editor.command = ["st", "-e", "nvim", "{}"]
 
 c.input.partial_timeout = 10000
 
 c.url.searchengines = {
-    "DEFAULT": "https://search.snopyta.org/?q={}&categories=general&language=en-US",
+    "DEFAULT": "https://searx.info/?q={}&categories=general&language=en-US",
     "aw": "https://wiki.archlinux.org/?search={}",
     "ar": "https://aur.archlinux.org/packages/{}",
     "az": "https://www.amazon.com/s?k={}",
@@ -30,7 +30,7 @@ c.url.searchengines = {
     "gh": "https://github.com/search?q={}",
     "hg": "https://hoogle.haskell.org/?hoogle={}",
     "lg": "http://libgen.rs/search.php?req={}",
-    "ph": "https://plato.stanford.edu/search/searcher.py?query={}",
+    "phil": "https://plato.stanford.edu/search/searcher.py?query={}",
     "qi": "https://quoteinvestigator.com/?s={}",
     "rd": "https://old.reddit.com/search?q={}",
     "sh": "http://gen.lib.rus.ec/scimag/?q={}",
@@ -40,5 +40,5 @@ c.url.searchengines = {
     "yt": "https://www.youtube.com/results?search_query={}"
 }
 
-c.url.start_pages = "file:///home/tmonson/.config/startpage/index.html"
+c.url.start_pages = "file:///Users/tkmonson/.config/startpage/index.html"
 
