@@ -1,0 +1,36 @@
+# Scripting addition must be loaded manually on Big Sur
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+# Tiling layout
+yabai -m config layout bsp
+
+# One possible style, the default; other styles can be mapped to hotkeys
+yabai -m config top_padding       30
+yabai -m config bottom_padding    30
+yabai -m config left_padding      30
+yabai -m config right_padding     30
+yabai -m config window_gap        30
+
+# Window borders
+yabai -m config window_border                 on
+yabai -m config window_border_width           5
+yabai -m config active_window_border_color    0xfffb4934
+yabai -m config normal_window_border_color    0xffa89984
+
+yabai -m config window_shadow off
+
+# Create spaces
+yabai -m space --create  # 2
+yabai -m space --create  # 3
+yabai -m space --create  # 4
+yabai -m space --create  # 5
+yabai -m space --create  # 6
+yabai -m space --create  # 7
+yabai -m space --create  # 8
+yabai -m space --create  # 9
+yabai -m space --create  # 0?
+
+# Specify which programs float by default
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Cisco AnyConnect Secure Mobility Client$" manage=off

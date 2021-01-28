@@ -35,6 +35,10 @@ python/*
 qutebrowser/*
 !qutebrowser/config.py
 
+!skhd/
+skhd/*
+!skhd/skhdrc
+
 !ssh/
 ssh/*
 !ssh/config
@@ -49,6 +53,10 @@ X11/*
 !X11/xinitrc
 # !X11/Xmodmap
 !X11/Xresources
+
+!yabai/
+yabai/*
+!yabai/yabairc
 
 !zsh/
 zsh/*
