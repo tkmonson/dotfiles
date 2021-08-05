@@ -113,6 +113,15 @@ alias backup="cp -ruv $HOME/code  \
 
 alias gitkey="eval '$(ssh-agent -s)'; ssh-add $HOME/.config/ssh/ibm_rsa"
 
+alias vpnc='sudo /opt/cisco/anyconnect/bin/vpn -s connect AMERICA-FAST'
+alias vpnd='sudo /opt/cisco/anyconnect/bin/vpn -s disconnect'
+alias couchdb='open -a Apache\ CouchDB'
+
+alias gpull='git pull; npm ci'
+alias fpush='git add packages/server/src/*;
+             git commit --amend --no-edit;
+             git push -f origin HEAD'
+
 # -------- COLORS --------
 
 # Import color scheme from wal

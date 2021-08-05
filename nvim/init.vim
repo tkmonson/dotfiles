@@ -85,3 +85,32 @@ autocmd filetype tex inoremap ,bf \textbf{}<esc>t{i
 autocmd filetype tex inoremap ,it \textit{}<esc>t{i
 autocmd filetype tex inoremap ,em \emph{}<esc>t{i
 
+" Copy file name/path to clipboard
+nmap ,cs :let @*=expand("%")<CR>
+nmap ,cl :let @*=expand("%:p")<CR>
+
+" coc-coverage
+function! LightlineCocCoverageStatus() abort
+  let status = get(g:, 'coc_coverage_lines_pct', '')
+  if empty(status)
+    return ''
+  endif
+
+  return '☂ ' . status . '% Lines Covered'
+endfunction
+
+let g:lightline = {
+  \ 'active': {
+  \   'left': [
+  \     [ 'mode', 'paste' ],
+  \     [ 'readonly', 'filename' ]
+  \   ],
+  \   'right':[
+  \     [ 'coccoverage', 'lineinfo', 'percent', 'cocstatus' ],
+  \     [ 'cocapollo' ]
+  \   ],
+  \ },
+  \ 'component_function': {
+  \   'coccoverage': 'LightlineCocCoverageStatus'
+  \ }
+\ }
