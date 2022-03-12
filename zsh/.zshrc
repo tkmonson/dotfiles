@@ -112,15 +112,18 @@ alias backup="cp -ruv $HOME/code  \
                       $XDG_CONFIG_HOME /run/media/tkmonson/titan_usb/alshain"
 
 alias gitkey="eval '$(ssh-agent -s)'; ssh-add $HOME/.config/ssh/ibm_rsa"
+alias mygitkey="eval '$(ssh-agent -s)'; ssh-add $HOME/.config/ssh/my_rsa"
 
 alias vpnc='sudo /opt/cisco/anyconnect/bin/vpn -s connect AMERICA-FAST'
 alias vpnd='sudo /opt/cisco/anyconnect/bin/vpn -s disconnect'
 alias couchdb='open -a Apache\ CouchDB'
 
-alias gpull='git pull; npm ci'
-alias fpush='git add packages/server/src/*;
+alias gpull='git pull; npm run clean:deep; npm ci'
+alias fpush='git add -u;
              git commit --amend --no-edit;
              git push -f origin HEAD'
+
+alias tsnode='npx ts-node'
 
 # -------- COLORS --------
 

@@ -8,16 +8,20 @@
 let maplocalleader =' '
 let mapleader=' '
 
+hi UncoveredLine guifg=#ffaa00 guibg=#ffaa00
+
 " Plugs (fetched from https://github.com/<plug>)
 call plug#begin('~/.config/nvim/plugged')
     Plug 'chrisbra/Colorizer'              " 
     Plug 'itchyny/lightline.vim'           " 
     Plug 'jreybert/vimagit'                " 
+    Plug 'juanpabloaj/vim-istanbul'        " 
     Plug 'junegunn/goyo.vim'               " 
     Plug 'lervag/vimtex'                   " 
     Plug 'PotatoesMaster/i3-vim-syntax'    " 
-    Plug 'scrooloose/nerdtree'             " 
+    Plug 'preservim/nerdtree'              " File explorer
     Plug 'vim-pandoc/vim-pandoc-syntax'    " 
+    Plug 'vim-scripts/highlight.vim'       " 
     Plug 'vimwiki/vimwiki'                 " 
 
     Plug 'pangloss/vim-javascript'         " JavaScript support
@@ -25,6 +29,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'maxmellon/vim-jsx-pretty'        " JS and JSX syntax
     Plug 'jparise/vim-graphql'             " GraphQL syntax
     Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }    " 
+    Plug 'ruanyl/coverage.vim'             " 
 call plug#end()
 
 " Basic settings
@@ -89,28 +94,3 @@ autocmd filetype tex inoremap ,em \emph{}<esc>t{i
 nmap ,cs :let @*=expand("%")<CR>
 nmap ,cl :let @*=expand("%:p")<CR>
 
-" coc-coverage
-function! LightlineCocCoverageStatus() abort
-  let status = get(g:, 'coc_coverage_lines_pct', '')
-  if empty(status)
-    return ''
-  endif
-
-  return '☂ ' . status . '% Lines Covered'
-endfunction
-
-let g:lightline = {
-  \ 'active': {
-  \   'left': [
-  \     [ 'mode', 'paste' ],
-  \     [ 'readonly', 'filename' ]
-  \   ],
-  \   'right':[
-  \     [ 'coccoverage', 'lineinfo', 'percent', 'cocstatus' ],
-  \     [ 'cocapollo' ]
-  \   ],
-  \ },
-  \ 'component_function': {
-  \   'coccoverage': 'LightlineCocCoverageStatus'
-  \ }
-\ }

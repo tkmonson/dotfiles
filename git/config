@@ -10,3 +10,5 @@
 	name = Tommy Monson
 	email = tkmonson@ibm.com
 
+[pull]
+	ff = only

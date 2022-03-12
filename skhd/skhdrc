@@ -73,8 +73,8 @@ shift + cmd - q : yabai -m window --close; yabai -m window --focus recent
 cmd - return : kitty &
 
 # Launch browsers (0x2A = '\')
-cmd - 0x2A :            open -a qutebrowser --new
-shift + cmd - 0x2A :    open -a firefox --new
+cmd - 0x2A :            /usr/local/bin/qutebrowser
+shift + cmd - 0x2A :    open -na /Applications/Google\ Chrome.app
 
 # Fullscreen
 cmd - f : yabai -m window --toggle zoom-fullscreen
